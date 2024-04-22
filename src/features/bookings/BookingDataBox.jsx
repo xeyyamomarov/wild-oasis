@@ -103,8 +103,25 @@ const Footer = styled.footer`
 
 // A purely presentational component
 function BookingDataBox({ booking }) {
+  // const {
+  //   created_at,
+  //   startDate,
+  //   endDate,
+  //   numNights,
+  //   numGuests,
+  //   cabinPrice,
+  //   extrasPrice,
+  //   totalPrice,
+  //   hasBreakfast,
+  //   observations,
+  //   isPaid,
+  //   guests: { fullName: guestName, email, country, countryFlag, nationalID },
+  //   cabins: { name: cabinName },
+  // } = booking;
+
+
   const {
-    created_at,
+      created_at,
     startDate,
     endDate,
     numNights,
@@ -115,10 +132,10 @@ function BookingDataBox({ booking }) {
     hasBreakfast,
     observations,
     isPaid,
-    guests: { fullName: guestName, email, country, countryFlag, nationalID },
-    cabins: { name: cabinName },
   } = booking;
 
+
+  const { name: cabinName } = booking.cabins;
   return (
     <StyledBookingDataBox>
       <Header>
@@ -139,7 +156,7 @@ function BookingDataBox({ booking }) {
       </Header>
 
       <Section>
-        <Guest>
+        {/* <Guest>
           {countryFlag && <Flag src={countryFlag} alt={`Flag of ${country}`} />}
           <p>
             {guestName} {numGuests > 1 ? `+ ${numGuests - 1} guests` : ""}
@@ -148,7 +165,7 @@ function BookingDataBox({ booking }) {
           <p>{email}</p>
           <span>&bull;</span>
           <p>National ID {nationalID}</p>
-        </Guest>
+        </Guest> */}
 
         {observations && (
           <DataItem

@@ -19,7 +19,6 @@ function SignupForm() {
         onSettled: () => reset(),
       }
     );
-    // console.log(data);
   }
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
